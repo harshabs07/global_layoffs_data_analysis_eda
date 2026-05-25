@@ -23,7 +23,7 @@ In the real world, data is rarely ready for immediate analysis. To preserve the 
 4. **Handling NULLs & Blank Values:** Used **Self-Joins** to populate missing industry data by cross-referencing companies with multiple layoff events.
 5. **Removing Unnecessary Data:** Dropped isolated rows lacking both layoff totals and percentage metrics, ensuring the final dataset was strictly analytical. 
 
-*Code reference:* [`data_cleaning.sql`](./1_data_cleaning.sql)
+*Code reference:* [`data_cleaning.sql`](data_cleaning.sql)
 
 ---
 
@@ -35,7 +35,7 @@ With a clean, structured database, I executed complex queries to extract actiona
 * **Time-Series Rolling Totals:** Built a CTE-driven rolling sum to track the cumulative progression of layoffs month-by-month over the 3-year period.
 * **Company Rankings per Year:** Engineered a multi-layered CTE using `DENSE_RANK()` to partition the data by year and rank the top 5 companies with the highest workforce reductions annually.
 
-*Code reference:* [`exploratory_data_analysis.sql`](./2_exploratory_data_analysis.sql)
+*Code reference:* [`exploratory_data_analysis.sql`](exploratory_data_analysis.sql)
 
 ---
 
